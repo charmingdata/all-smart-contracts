@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// https://blog.openzeppelin.com/reentrancy-after-istanbul/
 // https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol
 // Import the AggregatorV3Interface interface into our contract.
 // Interfaces provide a reusable and customizable approach to programming smart contracts.
