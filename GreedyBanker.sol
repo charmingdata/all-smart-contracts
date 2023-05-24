@@ -44,7 +44,7 @@ contract GreedyBanker {
     function deposit() payable external{
         if (bank[msg.sender].freebieUsed) {
             require(msg.value > 1000 wei, "Deposit must be greater than 1000 wei.");
-            bank[banker].balance += 1000; // transaction fee can be taken with respect of amount higher the amount higher the fee
+            bank[banker].balance += 1000; 
             bank[msg.sender].balance += (msg.value - 1000);
         } else {
             bank[msg.sender].freebieUsed = true;
@@ -59,7 +59,6 @@ contract GreedyBanker {
     }
 
     function getBalance() public view returns (uint256) {
-        // require(bank[msg.sender].freebieUsed || msg.sender == banker, "You have no active account with this bank."); // your code
         require(bank[msg.sender].freebieUsed || bank[msg.sender].balance >0 || msg.sender == banker,"You have no active account with this bank.");
         return bank[msg.sender].balance;
     }
