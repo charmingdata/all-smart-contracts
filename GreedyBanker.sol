@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity 0.8.17;
 
-// The original contract can be found in reddit link below. But it has been thoroughly modified.
+// The original contract can be found in the reddit link below. But it has been thoroughly modified.
 // https://www.reddit.com/r/solidity/comments/13gzpob/new_solidity_dev_code_review/?utm_source=share&utm_medium=web2x&context=3
 
 contract GreedyBanker {
