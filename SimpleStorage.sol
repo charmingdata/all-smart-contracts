@@ -17,6 +17,7 @@ contract SimpleStorage {
     // The 'view' label indicates that the function does not change the state of the contract
     // The function returns a string from the memory data location
     function getSentence() public view returns (string memory) {
+        // Return the storage variable 'storeTheSentence'
         return storeTheSentence;
     }
 
