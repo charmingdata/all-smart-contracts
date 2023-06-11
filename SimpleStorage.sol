@@ -1,31 +1,26 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-// This contract's comments are from Celo: https://docs.celo.org/blog/using-the-graph
+pragma solidity ^0.8.18;
 
 contract SimpleStorage {
-    // Define a string called storeTheSentence
+    // Define a string called storeTheSentence. This is a state variable, which will be permanently stored in the blockchain.
     string storeTheSentence;
 
     constructor(string memory initialSentence) {
-        // Set the initial value of storeTheSentence
+        // Assign the value of initialSentence to the storeTheSentence variable
         storeTheSentence = initialSentence;
     }
 
     // Declares a function called getSentence
-    // The 'public' label means the function can be called internally, by transactions or other contracts
-    // The 'view' label indicates that the function does not change the state of the contract
-    // The function returns a string from the memory data location
+    // Solidity funcions visibility: public, private, internal and external
+    // Solidity view functions: https://www.geeksforgeeks.org/solidity-view-and-pure-functions/
     function getSentence() public view returns (string memory) {
-        // Return the storage variable 'storeTheSentence'
         return storeTheSentence;
     }
 
     // Declare a function called setSentence
-    // The function takes 1 parameter, a string named newSentence, with the calldata data location in the Ethereum Virtual Machine
-    // The 'external' label means the function can only be called from an external source
+    // The function takes 1 input parameter, a string named newSentence, with the calldata data location in the Ethereum Virtual Machine
     function setSentence(string calldata newSentence) external {
-        // Set the value of storeTheSentence
+        // Assign the value of newSentence to the storeTheSentence variable
         storeTheSentence = newSentence;
     }
 }
