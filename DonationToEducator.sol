@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.18;
 
 // An informative description of Events: https://ethereum.stackexchange.com/a/56880/120832
 
@@ -8,7 +8,7 @@ contract Donation {
 
     event LogData(
         uint256 indexed amount,
-        string indexed reason,
+        string reason,
         address donatorAddress,
         uint256 timestamp
     );
